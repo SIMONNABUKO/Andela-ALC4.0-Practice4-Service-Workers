@@ -16,7 +16,7 @@ function printState(state){
     if('serviceWorker' in navigator){
         navigator.serviceWorker.register('service-worker.js', {scope: './'}
         ).then(function(registration){
-            let serviceWorker;
+            var serviceWorker;
             document.getElementById('status').innerHTML='Successfull';
             if(registration.installing){
                 serviceWorker= registration.installing;
